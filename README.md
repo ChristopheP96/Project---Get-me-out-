@@ -31,7 +31,12 @@ and their transition (transition functions)
 
 ## Task
 
-Task definition in order of priority
+- Design maze level 1 - level 2 - level 3
+- Character 
+- Let character move
+- Make walls blink when touched
+- change colors, add music, add timer 
+
 
 ## Links
 
