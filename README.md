@@ -16,18 +16,16 @@ position
 - Walls
 position, elightment if touched
 
+
 ## States y States Transitions
 
 Definition of the different states 
 and their transition (transition functions)
 
-- splashScreen
-
-- gameScreen
-
-- gameoverScreen
-
-- winScreen
+- game screen level 1 : canvas is black, parts of the wall blink when touched
+- game screen level 2 : maze is black, except circle around the character
+- "You lost" Screen : you didn't get out in time
+- Special page at the end of level 3 "You won"
 
 ## Task
 
@@ -35,6 +33,7 @@ and their transition (transition functions)
 - Character 
 - Let character move
 - Make walls blink when touched
+- make charcter move with a circle of light
 - change colors, add music, add timer 
 
 
