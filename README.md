@@ -1,4 +1,4 @@
-# Project---Get-me-out-
+# Project---Get-me-out!!!
 You are trapped and you have to get out. But Where is the maze? 
 
 ## MVP (DOM - CANVAS)
@@ -12,8 +12,8 @@ Classes and methods definition.
 
 - Character
 position
-- Walls
 
+- Walls
 position, elightment if touched
 
 ## States y States Transitions
