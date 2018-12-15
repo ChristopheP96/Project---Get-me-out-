@@ -56,7 +56,7 @@ and their transition (transition functions)
 ## Links
 
 ### Trello
-[Link url](https://trello.com)
+https://trello.com/b/2C539PIb/get-me-out
 
 ### Git
 URls for the project repo and deploy
