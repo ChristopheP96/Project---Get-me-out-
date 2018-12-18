@@ -20,12 +20,12 @@ make walls of level 1 blink when touched
 
 
 ## Backlog
-Create maze level 2
-Create maze level 3
-make character see only in a small radius on level 2
-Difficulty to be determined for level 3
-make an hourglass to put pressure
-add stressful sound
+*Create maze level 2
+*Create maze level 3
+*make character see only in a small radius on level 2
+*Difficulty to be determined for level 3
+* make an hourglass to put pressure
+* add stressful sound
 
 
 ## Data structure
