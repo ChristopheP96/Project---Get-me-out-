@@ -10,6 +10,9 @@ walls are actually a maze.
 ## MVP 
 Canvas
 
+Create a start screen
+Create a game screen
+Create a final screen
 Create a character
 Create maze level 1
 make character move
