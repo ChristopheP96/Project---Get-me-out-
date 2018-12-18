@@ -12,25 +12,32 @@ Canvas
 
 Create a character
 Create maze level 1
-Create maze level 2
-Create maze level 3
 make character move
 make walls of level 1 blink when touched
-make character see only in a small radius on level 2
-Difficulty to be determined for level 3
 
 
 ## Backlog
+Create maze level 2
+Create maze level 3
+make character see only in a small radius on level 2
+Difficulty to be determined for level 3
+make an hourglass to put pressure
+add stressful sound
 
 
 ## Data structure
 Classes and methods definition.
 
 - Character
-position
+position, speed, direction, shape, color
 
-- Walls
-position, elightment if touched
+- Maze 1 : 
+position of the walls, elightment if touched.
+
+- Maze 2: 
+position of the walls
+
+- Maze 3 : position of the walls
 
 
 ## States y States Transitions
