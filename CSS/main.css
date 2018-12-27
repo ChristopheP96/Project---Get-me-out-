@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    color: white;
+    margin : 0;
+}
+
+#welcome-screen {
+    
+}
+
+#start-screen {
+    background-color: red;
+    display: none;
+}
+
+#game {
+    border: 1px solid white;
+    display: 
+}
+
+#end {
+    display: none;
+}
