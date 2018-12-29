@@ -1,7 +1,7 @@
 
 
-let canvas = document.getElementById("game");
-let c = canvas.getContext('2d');
-let centerX = canvas.width / 2;
-let centerY = canvas.height / 2;
+let game = document.getElementById("game");
+let c = game.getContext('2d');
+let centerX = game.width / 2;
+let centerY = game.height / 2;
 

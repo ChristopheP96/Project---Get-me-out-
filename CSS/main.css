@@ -2,20 +2,24 @@ body {
     background-color: black;
     color: white;
     margin : 0;
+    width: 100%;
+    height: 100%;
 }
 
 #welcome-screen {
-    
+    display: none;
 }
 
 #start-screen {
-    background-color: red;
-    display: none;
 }
 
 #game {
     border: 1px solid white;
-    display: 
+    position : fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -300px;
 }
 
 #end {

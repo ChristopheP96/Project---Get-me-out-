@@ -1,11 +1,11 @@
 
 c.fillStyle = 'rgb(255,255,255)';
-c.fillRect(centerX, centerY, 20, 20);
+c.fillRect(centerX, centerY, 10, 10);
 c.stroke();
 
 
 function move (e) {
-    canvas.addEventListener('keydown', move, true);
+    game.addEventListener('keydown', move, true);
 
     if (e.keyCode === 39){
         centerX+=5;
@@ -21,8 +21,8 @@ function move (e) {
         centerY-=5;
     }
 
-    c.clearRect (0,0, canvas.width, canvas.height);
-    c.fillRect(centerX, centerY, 20, 20);
+    c.clearRect (0,0, game.width, game.height);
+    c.fillRect(centerX, centerY, 10, 10);
 }
 
 document.onkeydown = move;
