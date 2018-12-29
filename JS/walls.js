@@ -1,6 +1,4 @@
 
-
-
 //Shape 1
 c.beginPath();
 c.fillStyle = 'rgb(247,141,27)';
