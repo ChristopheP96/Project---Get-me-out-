@@ -21,3 +21,14 @@ function turnGameOn(){
     game.style.display='block';
     current_obj=game;
 }
+
+//function drawMazeAndRectangle (blocks, character){
+
+//}
+
+// collisions
+//function collide (position) {
+    //return this. {
+    //  return bodyPiece.row === position.row && bodyPiece.column === position.column;
+    //});
+//  }

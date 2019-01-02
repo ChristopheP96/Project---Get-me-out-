@@ -1,5 +1,3 @@
-
-
 // draws character
 c.fillStyle = 'rgb(255,255,255)';
 c.fillRect(centerX, centerY, 10, 10);
