@@ -26,7 +26,7 @@ function turnGameOn(){
 
 //}
 
-// collisions
+//collisions
 //function collide (position) {
     //return this. {
     //  return bodyPiece.row === position.row && bodyPiece.column === position.column;

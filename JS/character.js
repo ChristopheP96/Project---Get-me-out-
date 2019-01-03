@@ -1,27 +1,45 @@
-// draws character
-c.fillStyle = 'rgb(255,255,255)';
-c.fillRect(centerX, centerY, 10, 10);
-c.stroke();
+
+function Character (x, y, width, height, color){
+this.x = x;
+this.y = y;
+this.width = width;
+this.height = height;
+this.color = color;
+
+this.update = function(){
+    this.draw();
+}
+
+this.draw = function () {
+    c.beginPath();
+    c.rect(this.x, this.y, this.width, this.height);
+    c.fillStyle = this.color;
+    c.fill();
+    c.closePath();
+    }
+}
+
+let character = new Character (400,200,10,10,'rgb(255,255,255)')
 
 // moves character
 function move (e) {
     game.addEventListener('keydown', move, true);
 
     if (e.keyCode === 39){
-        centerX+=5;
+        character.x+=5;
         
     }
     if(e.keyCode === 37){
-        centerX-=5;
+        character.x-=5;
     }
     if(e.keyCode === 40){
-        centerY+=5;
+        character.y+=5;
     }
     if(e.keyCode === 38){
-        centerY-=5;
+        character.y-=5;
     }
 
     c.clearRect (0,0, game.width, game.height);
-    c.fillRect(centerX, centerY, 10, 10);
+    character.update();
 }
 document.onkeydown = move;
