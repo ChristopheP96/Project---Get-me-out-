@@ -38,7 +38,6 @@ function Squarre(squarreX, squarreY, dx, dy, radius) {
     this.draw = function() {
         d.fillStyle = 'rgb(255,255,255)';
         d.fillRect(this.squarreX, this.squarreY, this.radius, this.radius);
-        d.stroke();
     }
 
     this.update = function (){
@@ -71,6 +70,51 @@ function Squarre(squarreX, squarreY, dx, dy, radius) {
 }
 
 
+//Text
+
+drawText = function (){
+
+    //Wooow, it's so nice to be all together"
+    randomCharacterSpeech1 = function (){
+        d.font = "20px Courier New";
+        d.fillText("Wooow, it's so nice to be all together", squarreArray[90].squarreX, squarreArray[90].squarreY)
+        
+    }
+    randomCharacterSpeech1();
+
+    //"I'm so happy to be with my friends"
+    randomCharacterSpeech2 = function (){
+        d.font = "20px Courier New"
+        d.fillText("I'm so happy to be with my friends", squarreArray[50].squarreX, squarreArray[50].squarreY)
+    }
+    randomCharacterSpeech2();
+
+    //Instructions
+    instructions1 = function(){
+        d.font = "20px Courier New"
+        d.fillText("So much joy in here...", (startScreen.width/8)*6, (startScreen.height/10))
+    }
+    instructions2 = function(){
+        d.font = "20px Courier New"
+        d.fillText("It makes you want to stop it, no?", (startScreen.width/8)*6, (startScreen.height/10)+40)
+    }
+
+    instructions3 = function(){
+        d.font ="20px Courier New"
+        d.fillText("Select a victim clicking on him", (startScreen.width/8)*6, (startScreen.height/10)+80)
+    }
+
+    instructions1();
+    instructions2();
+    instructions3();
+}
+
+updateText = function (){
+    drawText();
+}
+
+// Launch all screen
+
 function animate(){
     requestAnimationFrame(animate);
     d.clearRect(0,0, innerWidth, innerHeight);
@@ -78,6 +122,8 @@ function animate(){
     for (let i = 0; i < squarreArray.length; i++) {
         squarreArray[i].update();
     }
+    updateText();
 }
 
 animate();
+

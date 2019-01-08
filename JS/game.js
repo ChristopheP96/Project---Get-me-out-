@@ -22,13 +22,98 @@ function turnGameOn(){
     current_obj=game;
 }
 
-//function drawMazeAndRectangle (blocks, character){
+//function creates character
+let character = new Character (400,300,10,10,'rgb(255,255,255)')
+let object = shape1A;
 
-//}
+//Text
 
-//collisions
-//function collide (position) {
-    //return this. {
-    //  return bodyPiece.row === position.row && bodyPiece.column === position.column;
-    //});
-//  }
+//"Wha.. wha... what? Where am I?"
+characterIsSurprised = function() {
+    c.font = "20px courrier new"
+    c.fillText ("Wha.. wha... what? Where am I?", 400, 300)
+}
+characterIsSurprised();
+
+characterIsSurprised2 = function() {
+    c.font = "20px courrier new"
+    c.fillText ("Please, let me join my friends again!", 400, 300)
+}
+characterIsSurprised2();
+
+//"Please get me out!"
+
+//check collision
+
+function checkCollision(character, object){
+ 
+       if (character.y >= object.y && character.y <= object.height)
+       {
+           if(character.x <= object.x)
+                character.x = object.x-character.width;
+           else if(character.x >= object.x)
+                character.x = object.x + object.width;
+       }
+
+       else if (character.x >= object.x && character.x <= object.x + object.width)
+       {
+           if (character.y <= object.y)
+            character.y = object.y - character.height;
+           else if (character.y >= object.y)
+            character.y = object.y + object.height;
+       }
+    }      
+
+
+   // move character
+function move (e) {
+    game.addEventListener('keydown', move, true);
+    
+        if (e.keyCode === 39){
+            checkCollision(character, shape1A)
+            checkCollision(character, shape1B)
+            checkCollision(character, shape1C)
+            checkCollision(character, shape1D)
+            checkCollision(character, shape1E)
+
+            character.x+=5;
+            
+        }
+        if(e.keyCode === 37){
+            checkCollision(character, shape1A)
+            checkCollision(character, shape1B)
+            checkCollision(character, shape1C)
+            checkCollision(character, shape1D)
+            checkCollision(character, shape1E)
+            character.x-=5;
+        }
+        if(e.keyCode === 40){
+            checkCollision(character, shape1A)
+            checkCollision(character, shape1B)
+            checkCollision(character, shape1C)
+            checkCollision(character, shape1D)
+            checkCollision(character, shape1E)
+            character.y+=5;
+        }
+        if(e.keyCode === 38){
+            checkCollision(character, shape1A)
+            checkCollision(character, shape1B)
+            checkCollision(character, shape1C)
+            checkCollision(character, shape1D)
+            checkCollision(character, shape1E)
+            character.y-=5;
+        }
+    
+    c.clearRect (0,0, game.width, game.height);
+    character.update();
+    shape1A.updateShapes();
+    shape1B.updateShapes();
+    shape1C.updateShapes();
+    shape1D.updateShapes();
+    shape1E.updateShapes();
+    shape2A.updateShapes();
+    shape2B.updateShapes();
+    shape2C.updateShapes();
+    shape2D.updateShapes();
+    }
+   document.onkeydown = move;

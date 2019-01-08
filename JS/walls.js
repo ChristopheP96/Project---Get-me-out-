@@ -1,10 +1,12 @@
+
+
 /*let maze1 = [
 [s10, s10, s10, s10, s10, s10, s10, s10, s10, s10, s10, s10, s10, s10, s10, s10, s10, s10, s10, s10],
 [s10, 0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   s10],
 [s10, 0,   s4,  s4,  s4,  s2,  s2,  s2,  s2,  s2,  s2,  s2,  s2,  s2,  s9,  0,   s8,  s8,  0,   s10],
 [s10, 0,   s4,  0,   0,   s2,  0,   0,   0,   0,   0,   0,   0,   s2,  0,   0,   0,   s8,  0,   s10],
-[s10, 0,   s4,  0,   0,   s2,  0,   0,   0,   0,   0,   0,   0,   s2,  0,   0,   0,   s8,  0,   s10],
-[0,   0,   s4,  0,   0,   s2,  0,   s1,  s1,  s1,  s1,  s1,  0,   s2,  0,   0,   0,   s8,  0,   s10],
+[0,   0,   s4,  0,   0,   s2,  0,   0,   0,   0,   0,   0,   0,   s2,  0,   0,   0,   s8,  0,   s10],
+[s10, 0,   s4,  0,   0,   s2,  0,   s1,  s1,  s1,  s1,  s1,  0,   s2,  0,   0,   0,   s8,  0,   s10],
 [s10, s5,  s4,  0,   0,   s2,  0,   s1,  0,   0,   0,   s1,  0,   s2,  0,   0,   0,   s8,  s7,  s10],
 [s10, 0,   0,   0,   0,   s2,  0,   0,   0,   0,   0,   s1,  0,   s2,  0,   0,   0,   0,   0,   s10],
 [s10, 0,   0,   0,   0,   s2,  0,   s1,  0,   0,   0,   s1,  0,   s2,  0,   0,   0,   s6,  0,   s10],
@@ -17,21 +19,44 @@
 ];
 */
 
+function Shapes (x, y, width, height, color){
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.color = color;
 
-function Shape(body, color){
-    this.body = [
-        {row : 1, column :2},
-        {row : 1, column: 3},
-        {row : 1, column: 3},
-        {row : 1, column: 3},
-        {row : 1, column: 3},
-        {row : 1, column: 3},
-    ];
-    this.color = '';
+    this.updateShapes = function(){
+    this.drawShapes();
+    }
+
+    this.drawShapes = function(){
+        c.beginPath();
+        c.rect(this.x, this.y, this.width, this.height);
+        c.fillStyle = this.color;
+        c.fill();
+        c.closePath();
+    }
 }
 
+
 //Shape 1
-function drawShape1 (){
+let shape1A = new Shapes (280, 200, 40, 80,'rgb(247,141,27)')
+let shape1B = new Shapes (320, 200, 160, 40,'rgb(247,141,27)')
+let shape1C = new Shapes (440, 240, 40, 160,'rgb(247,141,27)')
+let shape1D = new Shapes (280, 360, 200, 40,'rgb(247,141,27)')
+let shape1E = new Shapes (280,320, 40, 40,'rgb(247,141,27)')
+
+/*function drawShape1(){
+    c.beginPath();
+    c.rect(280,280,40,80);
+    c.fillStyle = 'rgb(247,141,27)';
+    c.fill();
+    c.closePath();
+}
+*/
+
+/*
 c.beginPath();
 c.fillStyle = 'rgb(247,141,27)';
 c.moveTo(280,200);
@@ -48,10 +73,19 @@ c.lineTo(320,280);
 c.lineTo(280,280);
 c.lineTo(280,200);
 c.fill();
-}
+*/
 
 //Shape 2
-function drawShape2(){
+
+
+let shape2A = new Shapes (200, 400, 120, 40, 'rgb(212,65,62)')
+let shape2B = new Shapes (200, 80, 40, 320, 'rgb(212,65,62)')
+let shape2C = new Shapes (240, 80, 320, 40, 'rgb(212,65,62)')
+let shape2D = new Shapes (520, 120, 40, 400,'rgb(212,65,62)')
+
+
+/*
+let shape2 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(212,65,62)';
 c.moveTo(320,400);
@@ -66,10 +100,10 @@ c.lineTo(240,120);
 c.lineTo(240,400);
 c.lineTo(320,400);
 c.fill();
-}
+*/
 
 //shape 3
-function drawShape3(){
+let shape3 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(83,160,243)';
 c.moveTo(520,480);
@@ -80,10 +114,10 @@ c.lineTo(120,360);
 c.lineTo(120,480);
 c.lineTo(520,480);
 c.fill();
-}
+
 
 //shape 4
-function drawShape4(){
+let shape4 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(83,160,243))';
 c.moveTo(200,80);
@@ -94,10 +128,10 @@ c.lineTo(80,270);
 c.lineTo(80,80);
 c.lineTo(280,80);
 c.fill();
-}
+
 
 //shape 5
-function drawShape5() {
+let shape5 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(11,186,14)';
 c.moveTo(80,270);
@@ -106,10 +140,10 @@ c.lineTo(40,230);
 c.lineTo(80,230);
 c.lineTo(80,270);
 c.fill();
-}
+
 
 //shape 6
-function drawShape6(){
+let shape6 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(83,160,243)';
 c.moveTo(560,480,);
@@ -120,10 +154,10 @@ c.lineTo(720,520);
 c.lineTo(560,520);
 c.lineTo(560,480);
 c.fill();
-}
+
 
 //shape 7
-function drawShape7(){
+let shape7 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(11,186,14)';
 c.moveTo(720,280);
@@ -132,10 +166,10 @@ c.lineTo(760,240);
 c.lineTo(720,240);
 c.lineTo(720,280);
 c.fill();
-}
+
 
 //shape 8
-function drawShape8(){
+let shape8 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(83,160,243)';
 c.moveTo(720,280);
@@ -146,10 +180,10 @@ c.lineTo(640,80);
 c.lineTo(720,80);
 c.lineTo(720,280);
 c.fill();
-}
+
 
 //shape 9
-function drawShape9(){
+let shape9 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(83,160,243)';
 c.moveTo(600,120);
@@ -158,9 +192,10 @@ c.lineTo(560,80);
 c.lineTo(600,80);
 c.lineTo(600,120);
 c.fill();
-}
+
 
 //final shape
+let shape10 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(247,141,27)';
 c.moveTo(0,0);
