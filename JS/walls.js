@@ -103,8 +103,12 @@ c.fill();
 */
 
 //shape 3
-let shape3 = new Shapes ();
-c.beginPath();
+
+let shape3A = new Shapes (80, 360, 40, 160, 'rgb(83,160,243)') 
+let shape3B = new Shapes (120, 480, 400, 40, 'rgb(83,160,243)');
+
+
+/*c.beginPath();
 c.fillStyle = 'rgb(83,160,243)';
 c.moveTo(520,480);
 c.lineTo(520,520);
@@ -114,9 +118,13 @@ c.lineTo(120,360);
 c.lineTo(120,480);
 c.lineTo(520,480);
 c.fill();
-
+*/
 
 //shape 4
+let shape4A = new Shapes (80, 80, 40, 200, 'rgb(83,160,243)') 
+let shape4B = new Shapes (120, 80, 80, 40, 'rgb(83,160,243)');
+
+/*
 let shape4 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(83,160,243))';
@@ -128,9 +136,12 @@ c.lineTo(80,270);
 c.lineTo(80,80);
 c.lineTo(280,80);
 c.fill();
-
+*/
 
 //shape 5
+let shape5 = new Shapes (40, 240, 40, 40, 'rgb(11,186,14)')
+
+/*
 let shape5 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(11,186,14)';
@@ -140,9 +151,12 @@ c.lineTo(40,230);
 c.lineTo(80,230);
 c.lineTo(80,270);
 c.fill();
-
+*/
 
 //shape 6
+let shape6A = new Shapes (560, 480, 120, 40, 'rgb(83,160,243)') 
+let shape6B = new Shapes (680, 360, 40, 160, 'rgb(83,160,243)');
+/*
 let shape6 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(83,160,243)';
@@ -154,9 +168,12 @@ c.lineTo(720,520);
 c.lineTo(560,520);
 c.lineTo(560,480);
 c.fill();
-
+*/
 
 //shape 7
+let shape7 = new Shapes (720, 240, 40, 40, 'rgb(11,186,14)')
+
+/*
 let shape7 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(11,186,14)';
@@ -166,9 +183,12 @@ c.lineTo(760,240);
 c.lineTo(720,240);
 c.lineTo(720,280);
 c.fill();
-
+*/
 
 //shape 8
+let shape8A = new Shapes (640, 80, 40, 40, 'rgb(83,160,243)') 
+let shape8B = new Shapes (680, 80, 40, 200, 'rgb(83,160,243)');
+/*
 let shape8 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(83,160,243)';
@@ -180,9 +200,13 @@ c.lineTo(640,80);
 c.lineTo(720,80);
 c.lineTo(720,280);
 c.fill();
-
+*/
 
 //shape 9
+
+let shape9 = new Shapes (560, 80, 40, 40, 'rgb(83,160,243')
+
+/*
 let shape9 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(83,160,243)';
@@ -192,9 +216,17 @@ c.lineTo(560,80);
 c.lineTo(600,80);
 c.lineTo(600,120);
 c.fill();
-
+*/
 
 //final shape
+let shape10A = new Shapes (0, 0, 40, 160,'rgb(247,141,27)')
+let shape10B = new Shapes (40, 0, 720, 40,'rgb(247,141,27)')
+let shape10C = new Shapes (760, 0, 40, 600,'rgb(247,141,27)')
+let shape10D = new Shapes (0, 560, 760, 40,'rgb(247,141,27)')
+let shape10E = new Shapes (0, 200, 40, 360,'rgb(247,141,27)')
+
+
+/*
 let shape10 = new Shapes ();
 c.beginPath();
 c.fillStyle = 'rgb(247,141,27)';
@@ -212,5 +244,5 @@ c.lineTo(40,160);
 c.lineTo(0,160);
 c.lineTo(0,0);
 c.fill();
-
+*/
 

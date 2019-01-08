@@ -89,6 +89,12 @@ drawText = function (){
     }
     randomCharacterSpeech2();
 
+    randomCharacterSpeech3 = function (){
+        d.font = "20px Courier New"
+        d.fillText("Ha ha ha ha", squarreArray[60].squarreX, squarreArray[60].squarreY)
+    }
+    randomCharacterSpeech3();
+
     //Instructions
     instructions1 = function(){
         d.font = "20px Courier New"
@@ -96,17 +102,23 @@ drawText = function (){
     }
     instructions2 = function(){
         d.font = "20px Courier New"
-        d.fillText("It makes you want to stop it, no?", (startScreen.width/8)*6, (startScreen.height/10)+40)
+        d.fillText("It's annoying, isn't it???", (startScreen.width/8)*6, (startScreen.height/10)+40)
     }
 
     instructions3 = function(){
+        d.font = "20px Courier New"
+        d.fillText("It makes you want to stop it, no?", (startScreen.width/8)*6, (startScreen.height/10)+80)
+    }
+
+    instructions4 = function(){
         d.font ="20px Courier New"
-        d.fillText("Select a victim clicking on him", (startScreen.width/8)*6, (startScreen.height/10)+80)
+        d.fillText("Select a victim clicking on him", (startScreen.width/8)*6, (startScreen.height/10)+120)
     }
 
     instructions1();
     instructions2();
     instructions3();
+    instructions4();
 }
 
 updateText = function (){

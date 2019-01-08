@@ -31,6 +31,7 @@ let object = shape1A;
 //"Wha.. wha... what? Where am I?"
 characterIsSurprised = function() {
     c.font = "20px courrier new"
+    c.fillStyle = "rgb(255,255,255)"
     c.fillText ("Wha.. wha... what? Where am I?", 400, 300)
 }
 characterIsSurprised();
@@ -40,8 +41,6 @@ characterIsSurprised2 = function() {
     c.fillText ("Please, let me join my friends again!", 400, 300)
 }
 characterIsSurprised2();
-
-//"Please get me out!"
 
 //check collision
 
@@ -115,5 +114,21 @@ function move (e) {
     shape2B.updateShapes();
     shape2C.updateShapes();
     shape2D.updateShapes();
+    shape3A.updateShapes();
+    shape3B.updateShapes();
+    shape4A.updateShapes();
+    shape4B.updateShapes();
+    shape5.updateShapes();
+    shape6A.updateShapes();
+    shape6B.updateShapes();
+    shape7.updateShapes();
+    shape8A.updateShapes();
+    shape8B.updateShapes();
+    shape9.updateShapes();
+    shape10A.updateShapes();
+    shape10B.updateShapes();
+    shape10C.updateShapes();
+    shape10D.updateShapes();
+    shape10E.updateShapes();
     }
    document.onkeydown = move;
