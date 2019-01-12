@@ -35,7 +35,8 @@ function Squarre(squarreX, squarreY, dx, dy, radius) {
     this.dy = dy;
     this.radius = 10
     
-    this.draw = function() {
+    this.draw = function() 
+    {
         d.fillStyle = 'rgb(255,255,255)';
         d.fillRect(this.squarreX, this.squarreY, this.radius, this.radius);
     }
@@ -63,7 +64,6 @@ function Squarre(squarreX, squarreY, dx, dy, radius) {
         } else if (this.radius > 2) {
             this.radius -=1;
         }
-
 
         this.draw();
     }
