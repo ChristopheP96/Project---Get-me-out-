@@ -78,21 +78,23 @@ drawText = function (){
     randomCharacterSpeech1 = function (){
         d.font = "20px Courier New";
         d.fillText("Wooow, it's so nice to be all together", squarreArray[90].squarreX, squarreArray[90].squarreY)
-        
     }
-    randomCharacterSpeech1();
+    
 
     //"I'm so happy to be with my friends"
     randomCharacterSpeech2 = function (){
         d.font = "20px Courier New"
         d.fillText("I'm so happy to be with my friends", squarreArray[50].squarreX, squarreArray[50].squarreY)
     }
-    randomCharacterSpeech2();
+    
 
     randomCharacterSpeech3 = function (){
         d.font = "20px Courier New"
         d.fillText("Ha ha ha ha", squarreArray[60].squarreX, squarreArray[60].squarreY)
     }
+
+    randomCharacterSpeech1();
+    randomCharacterSpeech2();
     randomCharacterSpeech3();
 
     //Instructions

@@ -41,8 +41,6 @@ characterIsSurprised2 = function() {
 }
 characterIsSurprised2();
 
-
-
 //check collision
 function checkCollision(character, object){
 
@@ -96,10 +94,25 @@ function checkCollision(character, object){
             console.log("collision detected");
         }
         
-        
+        if (crash === true) {
+        changeColor(object);
+    }
     return crash
 }
 
+//change color 
+
+function changeColor(object){
+
+    object.colorBlack = object.colorBlink;
+    
+    if (object === shape1A) {
+        shape1B.colorBlack = shape1B.colorBlink;
+        shape1C.colorBlack = shape1C.colorBlink;
+        shape1D.colorBlack = shape1D.colorBlink;
+        shape1E.colorBlack = shape1E.colorBlink;
+    }
+}
 
  // move character
 function move (e) {
@@ -107,6 +120,7 @@ function move (e) {
     
         if (e.keyCode === 39)
         {
+        
         checkCollision(character, shape1B)
         checkCollision(character, shape1A)
         checkCollision(character, shape1C)
@@ -132,12 +146,13 @@ function move (e) {
         checkCollision(character, shape10C)
         checkCollision(character, shape10D)
         checkCollision(character, shape10E)
-
+        
         character.x+=5;
         }
 
         if(e.keyCode === 37)
         {
+        
         checkCollision(character, shape1B)
         checkCollision(character, shape1A)
         checkCollision(character, shape1C)
@@ -163,6 +178,7 @@ function move (e) {
         checkCollision(character, shape10C)
         checkCollision(character, shape10D)
         checkCollision(character, shape10E)
+        
 
         character.x-=5;
         }
@@ -194,6 +210,7 @@ function move (e) {
         checkCollision(character, shape10C)
         checkCollision(character, shape10D)
         checkCollision(character, shape10E)
+        
 
         character.y+=5;
         }
@@ -225,6 +242,7 @@ function move (e) {
         checkCollision(character, shape10C)
         checkCollision(character, shape10D)
         checkCollision(character, shape10E)
+        
 
         character.y-=5;
         }
@@ -232,6 +250,7 @@ function move (e) {
     c.clearRect (0,0, game.width, game.height);
     character.update();
 
+    
     shape1A.updateShapes();
     shape1B.updateShapes();
     shape1C.updateShapes();
@@ -260,16 +279,3 @@ function move (e) {
     
 }
    document.onkeydown = move;
-
-
-
-   //color change
-/*
-   changeShapeColor = function(){
-    if (crash == true)
-    {
-
-    }
-
-   }
-*/
