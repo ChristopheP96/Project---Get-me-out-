@@ -116,100 +116,45 @@ function changeColor(object){
 
  // move character
 function move (e) {
+
     game.addEventListener('keydown', move, true);
     
         if (e.keyCode === 39)
         {
+            maze1.forEach(function(shapeItem)
+            {
+                shapeItem.forEach(function(item)
+                {checkCollision(character, item);
+                });
+            });
         
-        checkCollision(character, shape1B)
-        checkCollision(character, shape1A)
-        checkCollision(character, shape1C)
-        checkCollision(character, shape1D)
-        checkCollision(character, shape1E)
-        checkCollision(character, shape2A)
-        checkCollision(character, shape2B)
-        checkCollision(character, shape2C)
-        checkCollision(character, shape2D)
-        checkCollision(character, shape3A)
-        checkCollision(character, shape3B)
-        checkCollision(character, shape4A)
-        checkCollision(character, shape4B)
-        checkCollision(character, shape5)
-        checkCollision(character, shape6A)
-        checkCollision(character, shape6B)
-        checkCollision(character, shape7)
-        checkCollision(character, shape8A)
-        checkCollision(character, shape8B)
-        checkCollision(character, shape9)
-        checkCollision(character, shape10A)
-        checkCollision(character, shape10B)
-        checkCollision(character, shape10C)
-        checkCollision(character, shape10D)
-        checkCollision(character, shape10E)
-        
+
         character.x+=5;
         }
 
         if(e.keyCode === 37)
         {
         
-        checkCollision(character, shape1B)
-        checkCollision(character, shape1A)
-        checkCollision(character, shape1C)
-        checkCollision(character, shape1D)
-        checkCollision(character, shape1E)
-        checkCollision(character, shape2A)
-        checkCollision(character, shape2B)
-        checkCollision(character, shape2C)
-        checkCollision(character, shape2D)
-        checkCollision(character, shape3A)
-        checkCollision(character, shape3B)
-        checkCollision(character, shape4A)
-        checkCollision(character, shape4B)
-        checkCollision(character, shape5)
-        checkCollision(character, shape6A)
-        checkCollision(character, shape6B)
-        checkCollision(character, shape7)
-        checkCollision(character, shape8A)
-        checkCollision(character, shape8B)
-        checkCollision(character, shape9)
-        checkCollision(character, shape10A)
-        checkCollision(character, shape10B)
-        checkCollision(character, shape10C)
-        checkCollision(character, shape10D)
-        checkCollision(character, shape10E)
-        
+            maze1.forEach(function(shapeItem)
+            {
+                shapeItem.forEach(function(item)
+                {checkCollision(character, item);
+                });
+            });
 
+        
         character.x-=5;
         }
 
         if(e.keyCode === 40)
         {
-        checkCollision(character, shape1B)
-        checkCollision(character, shape1A)
-        checkCollision(character, shape1C)
-        checkCollision(character, shape1D)
-        checkCollision(character, shape1E)
-        checkCollision(character, shape2A)
-        checkCollision(character, shape2B)
-        checkCollision(character, shape2C)
-        checkCollision(character, shape2D)
-        checkCollision(character, shape3A)
-        checkCollision(character, shape3B)
-        checkCollision(character, shape4A)
-        checkCollision(character, shape4B)
-        checkCollision(character, shape5)
-        checkCollision(character, shape6A)
-        checkCollision(character, shape6B)
-        checkCollision(character, shape7)
-        checkCollision(character, shape8A)
-        checkCollision(character, shape8B)
-        checkCollision(character, shape9)
-        checkCollision(character, shape10A)
-        checkCollision(character, shape10B)
-        checkCollision(character, shape10C)
-        checkCollision(character, shape10D)
-        checkCollision(character, shape10E)
+        
+            maze1.forEach(function(shapeItem)
+            {
+                shapeItem.forEach(function(item)
+                {checkCollision(character, item);
+                });
+            });
         
 
         character.y+=5;
@@ -217,65 +162,33 @@ function move (e) {
 
         if(e.keyCode === 38)
         {
-        checkCollision(character, shape1B)
-        checkCollision(character, shape1A)
-        checkCollision(character, shape1C)
-        checkCollision(character, shape1D)
-        checkCollision(character, shape1E)
-        checkCollision(character, shape2A)
-        checkCollision(character, shape2B)
-        checkCollision(character, shape2C)
-        checkCollision(character, shape2D)
-        checkCollision(character, shape3A)
-        checkCollision(character, shape3B)
-        checkCollision(character, shape4A)
-        checkCollision(character, shape4B)
-        checkCollision(character, shape5)
-        checkCollision(character, shape6A)
-        checkCollision(character, shape6B)
-        checkCollision(character, shape7)
-        checkCollision(character, shape8A)
-        checkCollision(character, shape8B)
-        checkCollision(character, shape9)
-        checkCollision(character, shape10A)
-        checkCollision(character, shape10B)
-        checkCollision(character, shape10C)
-        checkCollision(character, shape10D)
-        checkCollision(character, shape10E)
         
+            maze1.forEach(function(shapeItem)
+        {
+            shapeItem.forEach(function(item)
+            {checkCollision(character, item);
+            });
+        });
+       
 
         character.y-=5;
         }
     
+
+    //clear Rect
     c.clearRect (0,0, game.width, game.height);
+    
+    //Redraw character after each clear rect
     character.update();
 
     
-    shape1A.updateShapes();
-    shape1B.updateShapes();
-    shape1C.updateShapes();
-    shape1D.updateShapes();
-    shape1E.updateShapes();
-    shape2A.updateShapes();
-    shape2B.updateShapes();
-    shape2C.updateShapes();
-    shape2D.updateShapes();
-    shape3A.updateShapes();
-    shape3B.updateShapes();
-    shape4A.updateShapes();
-    shape4B.updateShapes();
-    shape5.updateShapes();
-    shape6A.updateShapes();
-    shape6B.updateShapes();
-    shape7.updateShapes();
-    shape8A.updateShapes();
-    shape8B.updateShapes();
-    shape9.updateShapes();
-    shape10A.updateShapes();
-    shape10B.updateShapes();
-    shape10C.updateShapes();
-    shape10D.updateShapes();
-    shape10E.updateShapes();
+    // redraw all shapes at each clear rect
+    maze1.forEach(function(shapeItem)
+        {
+            shapeItem.forEach(function(item)
+            {item.updateShapes();
+            });
+        });
     
 }
    document.onkeydown = move;
