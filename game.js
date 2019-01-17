@@ -94,24 +94,99 @@ function checkCollision(character, object){
             console.log("collision detected");
         }
         
-        if (crash === true) {
-        changeColor(object);
-    }
+        if (crash === true) 
+        {
+            changeColor(object);
+            syncBlinks(object);
+        }
+
     return crash
 }
 
-//change color 
+//change color of touched
 
 function changeColor(object){
-
     object.colorBlack = object.colorBlink;
+}
+
+function syncBlinks(object){
+
+    switch (object) {
+        case shape1A: 
+        case shape1B:
+        case shape1C: 
+        case shape1D:
+        case shape1E:
+        case shape10A: 
+        case shape10B:
+        case shape10C: 
+        case shape10D:
+        case shape10E:
+
+            shape1.forEach(function(shape1Item)
+            {
+                changeColor(shape1Item);
+            });
+
+            shape10.forEach(function(shape10Item)
+            {
+                changeColor(shape10Item);
+            });
+        break;
+
+        case shape2A:
+        case shape2B:
+        case shape2C:
+        case shape2D:
+            shape2.forEach(function(shape2Item)
+            {
+                changeColor(shape2Item);
+            });
+        break;
+
+        case shape3A:
+        case shape3B:
+        case shape4A:
+        case shape4B:
+        case shape6A:
+        case shape6B:
+        case shape8A:
+        case shape8B:
+        case shape9:
+            shape3.forEach(function(shape3Item)
+            {
+                changeColor(shape3Item);
+            });
+
+            shape4.forEach(function(shape4Item)
+            {
+                changeColor(shape4Item);
+            });
+
+            shape6.forEach(function(shape6Item)
+            {
+                changeColor(shape6Item);
+            });
+
+            shape8.forEach(function(shape8Item)
+            {
+                changeColor(shape8Item);
+            });
+
+            changeColor(shape9);
+        break;
+
+        case shape5:
+        case shape7:
+            changeColor(shape5);
+            changeColor(shape7);
+        break;
     
-    if (object === shape1A) {
-        shape1B.colorBlack = shape1B.colorBlink;
-        shape1C.colorBlack = shape1C.colorBlink;
-        shape1D.colorBlack = shape1D.colorBlink;
-        shape1E.colorBlack = shape1E.colorBlink;
+        default:
+            break;
     }
+    
+
 }
 
  // move character
