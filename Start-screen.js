@@ -19,7 +19,8 @@ window.addEventListener('mousemove',
 let radius = 10;
 let squarreArray = [];
 
-for (let i = 0; i < 150; i++) {
+//properties of randomSquarres
+for (let i = 0; i < 200; i++) {
     let squarreX = Math.random() * (innerWidth) + 10;
     let squarreY = Math.random() * (innerHeight) + 10;
     let dx = (Math.random() - 0.5) * 9;
@@ -72,30 +73,20 @@ function Squarre(squarreX, squarreY, dx, dy, radius) {
 
 //Text
 
-drawText = function (){
-
-    //Wooow, it's so nice to be all together"
-    randomCharacterSpeech1 = function (){
-        d.font = "20px Courier New";
-        d.fillText("Wooow, it's so nice to be all together", squarreArray[90].squarreX, squarreArray[90].squarreY)
-    }
+randomCharacterSpeech1 = function () {
+    d.font = "20px Courier New";
+    d.fillText("Wooow, it's so nice to be all together", squarreArray[90].squarreX, squarreArray[90].squarreY);
+}
+     
+randomCharacterSpeech2 = function (){
+    d.font = "20px Courier New"
+    d.fillText("I'm so happy to be with my friends", squarreArray[50].squarreX, squarreArray[50].squarreY)
+}
     
-
-    //"I'm so happy to be with my friends"
-    randomCharacterSpeech2 = function (){
-        d.font = "20px Courier New"
-        d.fillText("I'm so happy to be with my friends", squarreArray[50].squarreX, squarreArray[50].squarreY)
-    }
-    
-
-    randomCharacterSpeech3 = function (){
-        d.font = "20px Courier New"
-        d.fillText("Ha ha ha ha", squarreArray[60].squarreX, squarreArray[60].squarreY)
-    }
-
-    randomCharacterSpeech1();
-    randomCharacterSpeech2();
-    randomCharacterSpeech3();
+randomCharacterSpeech3 = function (){
+    d.font = "20px Courier New"
+    d.fillText("Ha ha ha ha", squarreArray[60].squarreX, squarreArray[60].squarreY)
+}
 
     //Instructions
     instructions1 = function(){
@@ -117,17 +108,8 @@ drawText = function (){
         d.fillText("Select a victim clicking on him", (startScreen.width/8)*6, (startScreen.height/10)+120)
     }
 
-    instructions1();
-    instructions2();
-    instructions3();
-    instructions4();
-}
 
-updateText = function (){
-    drawText();
-}
-
-// Launch all screen
+// ClearRect
 
 function animate(){
     requestAnimationFrame(animate);
@@ -136,7 +118,14 @@ function animate(){
     for (let i = 0; i < squarreArray.length; i++) {
         squarreArray[i].update();
     }
-    updateText();
+    
+    randomCharacterSpeech1();
+    randomCharacterSpeech2();
+    randomCharacterSpeech3();
+    instructions1();
+    instructions2();
+    instructions3();
+    instructions4();
 }
 
 animate();

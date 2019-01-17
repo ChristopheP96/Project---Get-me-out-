@@ -21,26 +21,6 @@ function turnGameOn(){
     current_obj=game;
 }
 
-//function creates character
-let character = new Character (420,340,10,10,'rgb(255,255,255)')
-let object = shape1A;
-
-//Text
-
-//"Wha.. wha... what? Where am I?"
-characterIsSurprised = function() {
-    c.font = "20px courrier new"
-    c.fillStyle = "rgb(255,255,255)"
-    c.fillText ("Wha.. wha... what? Where am I?", 400, 300)
-}
-characterIsSurprised();
-
-characterIsSurprised2 = function() {
-    c.font = "20px courrier new"
-    c.fillText ("Please, let me join my friends again!", 400, 300)
-}
-characterIsSurprised2();
-
 //check collision
 function checkCollision(character, object){
 
@@ -61,8 +41,8 @@ function checkCollision(character, object){
             && characterRight > objectLeft)
         {
             crash=true;
-            character.y = character.y+15;
-            console.log("collision detected");
+            character.y = character.y+5;
+            console.log("collision")
         }
 
         if (characterBottom === objectTop
@@ -70,8 +50,8 @@ function checkCollision(character, object){
             && characterRight > objectLeft)
         {
             crash=true;
-            character.y = character.y-15;
-            console.log("collision detected");
+            character.y = character.y-5;
+            console.log("collision")
         }
 
 
@@ -80,8 +60,8 @@ function checkCollision(character, object){
             && characterBottom > objectTop)
         {
             crash=true;
-            character.x = character.x+15;
-            console.log("collision detected");
+            character.x = character.x+5;
+            console.log("collision")
         }
         
 
@@ -90,8 +70,8 @@ function checkCollision(character, object){
             && characterBottom > objectTop)
         {
             crash=true;
-            character.x = character.x-15;
-            console.log("collision detected");
+            character.x = character.x-5;
+            console.log("collision")
         }
         
         if (crash === true) 
@@ -106,7 +86,12 @@ function checkCollision(character, object){
 //change color of touched
 
 function changeColor(object){
-    object.colorBlack = object.colorBlink;
+    
+    object.colorBlack = object.colorBlink;  
+    
+    setTimeout(() => {
+        object.colorBlack = 'rgb(0,0,0)';
+    }, 1000);
 }
 
 function syncBlinks(object){

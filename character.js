@@ -19,3 +19,18 @@ function Character (x, y, width, height, color){
     }
 }
 
+let character = new Character (420,340,10,10,'rgb(255,255,255)')
+
+//"Wha.. wha... what? Where am I?"
+characterIsSurprised = function() {
+    c.font = "20px courrier new"
+    c.fillStyle = "rgb(255,255,255)"
+    c.fillText ("Wha.. wha... what? Where am I?", 400, 300)
+}
+characterIsSurprised();
+
+characterIsSurprised2 = function() {
+    c.font = "20px courrier new"
+    c.fillText ("Please, let me join my friends again!", 400, 300)
+}
+characterIsSurprised2();
