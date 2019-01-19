@@ -71,12 +71,12 @@ https://trello.com/b/2C539PIb/get-me-out
 ### Git
 URls for the project repo and deploy
 
-[Link Repo](http://github.com)
+[Link Repo](https://github.com/ChristopheP96/Project---Get-me-out-)
 
-[Link Deploy](http://github.com)
+[Link Deploy](https://christophep96.github.io/Project---Get-me-out-/)
 
 
 ### Slides
 
-[Link Slides] (https://docs.google.com/presentation/d/1j5vQAfOkjqxxyutAD2MKd-b7sQ237iFM9kKK0TrjM1U/edit#slide=id.p)
+[Link Slides] (https://docs.google.com/presentation/d/1j5vQAfOkjqxxyutAD2MKd-b7sQ237iFM9kKK0TrjM1U/edit?usp=sharing)
 
