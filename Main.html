@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Get me out!!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+</head>
+
+
+<body>
+
+<audio src = "Background music.mp3" controls>
+    <a href = "Background music.mp3">BackGround music</a>
+</audio>
+
+<div id= "welcome-screen" onclick="closeStartScreen()">
+       <canvas id="start-screen"></canvas>
+</div>
+
+<canvas id="game" width="800" height="600"></canvas>
+
+<div id="end">
+    I am out
+</div>
+
+<script src="main.js"></script>
+<script src="Start-screen.js"></script>
+<script src="character.js"></script>
+<script src="walls.js"></script>
+<script src="game.js"></script>
+
+
+</body>
+
+</html>
