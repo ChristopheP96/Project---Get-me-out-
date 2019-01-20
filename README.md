@@ -22,8 +22,6 @@ make walls of level 1 blink when touched
 ## Backlog
 *Create maze level 2
 *Create maze level 3
-*make character see only in a small radius on level 2
-*Difficulty to be determined for level 3
 * make an hourglass to put pressure
 * add stressful sound
 
@@ -32,7 +30,7 @@ make walls of level 1 blink when touched
 Classes and methods definition.
 
 - Character
-position, speed, direction, shape, color
+position, speed, shape, color
 
 - Maze 1 : 
 position of the walls, elightment if touched.
@@ -40,7 +38,8 @@ position of the walls, elightment if touched.
 - Maze 2: 
 position of the walls
 
-- Maze 3 : position of the walls
+- Maze 3 : 
+position of the walls
 
 
 ## States y States Transitions
@@ -49,9 +48,7 @@ Definition of the different states
 and their transition (transition functions)
 
 - game screen level 1 : canvas is black, parts of the wall blink when touched
-- game screen level 2 : maze is black, except circle around the character
-- "You lost" Screen : you didn't get out in time
-- Special page at the end of level 3 "You won"
+- game screen level 2 : canvas is black, parts of the wall blink when touched
 
 ## Task
 
@@ -59,8 +56,7 @@ and their transition (transition functions)
 - Character 
 - Let character move
 - Make walls blink when touched
-- make charcter move with a circle of light
-- change colors, add music, add timer 
+- change colors, add music
 
 
 ## Links
@@ -69,8 +65,6 @@ and their transition (transition functions)
 https://trello.com/b/2C539PIb/get-me-out
 
 ### Git
-URls for the project repo and deploy
-
 [Link Repo](https://github.com/ChristopheP96/Project---Get-me-out-)
 
 [Link Deploy](https://christophep96.github.io/Project---Get-me-out-/)
