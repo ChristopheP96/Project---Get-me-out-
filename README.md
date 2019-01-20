@@ -78,5 +78,5 @@ URls for the project repo and deploy
 
 ### Slides
 
-[Link Slides] (https://docs.google.com/presentation/d/1j5vQAfOkjqxxyutAD2MKd-b7sQ237iFM9kKK0TrjM1U/edit?usp=sharing)
+[Link Slides](https://docs.google.com/presentation/d/1j5vQAfOkjqxxyutAD2MKd-b7sQ237iFM9kKK0TrjM1U/edit?usp=sharing)
 
