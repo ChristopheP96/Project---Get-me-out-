@@ -80,6 +80,18 @@ function checkCollision(character, object){
             syncBlinks(object);
         }
 
+        if(character.x <= 0)
+        {
+            startScreen.style.display = "block";
+            maze1.forEach(function(shapeItem)
+            {
+                shapeItem.forEach(function(item)
+                {item.x = -600;
+                });
+            });
+
+        }
+
     return crash
 }
 
@@ -170,8 +182,6 @@ function syncBlinks(object){
         default:
             break;
     }
-    
-
 }
 
  // move character
@@ -232,7 +242,7 @@ function move (e) {
        
 
         character.y-=5;
-        }
+}
     
 
     //clear Rect
