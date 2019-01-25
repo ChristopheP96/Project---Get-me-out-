@@ -18,3 +18,18 @@ body {
 #end {
     display: none;
 }
+
+#title{
+    margin-left: 40%;
+    margin-right: 30%;
+    margin-top: 20%;
+    display: block;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2{
+    font-size: 15px;
+}

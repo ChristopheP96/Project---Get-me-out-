@@ -1,3 +1,13 @@
+
+setTimeout(() => {
+    document.getElementById('title').style.display = "none";
+}, 5000);
+
+setTimeout(() => {
+    animate();
+}, 5000);
+
+
 let startScreen = document.getElementById('start-screen')
 let d = startScreen.getContext ('2d');
 startScreen.width = window.innerWidth;
@@ -156,10 +166,6 @@ instructions3 = function(){
     }, 14000);
 }
 
-
-setTimeout(() => {
-    animate();    
-}, 5000);
 function animate(){
     requestAnimationFrame(animate);
     d.clearRect(0,0, innerWidth, innerHeight);
