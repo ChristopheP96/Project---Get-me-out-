@@ -2,9 +2,13 @@
 //Turn Start Screen invisible to start the game
 function closeStartScreen(){
 
-    if (startScreen.style.display === "none") {
+    if (startScreen.style.display === "none") 
+    {
         startScreen.style.display = "block";
-    } else {
+        document.getElementById('transition').play();
+    } 
+    else 
+    {
         startScreen.style.display = "none"
     }
     return turnGameOn();
@@ -20,6 +24,19 @@ function turnGameOn(){
     game.style.display='block';
     current_obj=game;
 }
+
+function turnOn() {
+    requestAnimationFrame(turnOn);
+    c.clearRect (0,0, game.width, game.height);
+    character.update();
+    maze1.forEach(function(shapeItem)
+        {
+            shapeItem.forEach(function(item)
+            {item.updateShapes();
+            });
+        });
+}
+turnOn();
 
 //check collision
 function checkCollision(character, object){
@@ -42,7 +59,6 @@ function checkCollision(character, object){
         {
             crash=true;
             character.y = character.y+10;
-            console.log("collision")
         }
 
         if (characterBottom === objectTop
@@ -51,7 +67,6 @@ function checkCollision(character, object){
         {
             crash=true;
             character.y = character.y-10;
-            console.log("collision")
         }
 
 
@@ -61,7 +76,6 @@ function checkCollision(character, object){
         {
             crash=true;
             character.x = character.x+10;
-            console.log("collision")
         }
         
 
@@ -71,13 +85,13 @@ function checkCollision(character, object){
         {
             crash=true;
             character.x = character.x-10;
-            console.log("collision")
         }
         
         if (crash === true) 
         {
             changeColor(object);
             syncBlinks(object);
+            document.getElementById('collisionSound').play();
         }
 
         if(character.x <= 0)
@@ -242,23 +256,6 @@ function move (e) {
        
 
         character.y-=5;
-}
-    
-
-    //clear Rect
-    c.clearRect (0,0, game.width, game.height);
-    
-    //Redraw character after each clear rect
-    character.update();
-
-    
-    // redraw all shapes at each clear rect
-    maze1.forEach(function(shapeItem)
-        {
-            shapeItem.forEach(function(item)
-            {item.updateShapes();
-            });
-        });
-    
+        }
 }
    document.onkeydown = move;

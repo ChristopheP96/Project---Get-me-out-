@@ -12,24 +12,24 @@
 
 <body>
 
-<iframe src="background music.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+<iframe src="backgroundmusic.mp3" allow="autoplay" style="display:none" id="iframeAudio">
 </iframe> 
 
+<audio id="collisionSound" src="Collision.mp3"></audio>
+<audio id="transition" src="Transition.mp3"></audio>
+
 <div id= "welcome-screen" onclick="closeStartScreen()">
-       <canvas id="start-screen"></canvas>
+    <canvas id="start-screen"></canvas>
 </div>
 
 <canvas id="game" width="800" height="600"></canvas>
-
-<div id="end">
-    I am out
-</div>
 
 <script src="main.js"></script>
 <script src="Start-screen.js"></script>
 <script src="character.js"></script>
 <script src="walls.js"></script>
 <script src="game.js"></script>
+
 
 
 </body>

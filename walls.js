@@ -41,65 +41,70 @@ function Shapes (x, y, width, height, colorBlack, colorBlink){
     }
 }
 
+let black = 'rgb(0,0,0)';
+let orange = 'rgb(247,141,27)';
+let red = 'rgb(212,65,62)';
+let blue = 'rgb(83,160,243)';
+let green = 'rgb(11,186,14)';
 
 //Shape 1
 // color rgb(247,141,27)
-let shape1A = new Shapes (280, 200, 40, 80,'rgb(0,0,0)', 'rgb(247,141,27)');
-let shape1B = new Shapes (320, 200, 160, 40,'rgb(0,0,0)', 'rgb(247,141,27)');
-let shape1C = new Shapes (440, 240, 40, 160,'rgb(0,0,0)', 'rgb(247,141,27)');
-let shape1D = new Shapes (280, 360, 200, 40,'rgb(0,0,0)', 'rgb(247,141,27)');
-let shape1E = new Shapes (280,320, 40, 40,'rgb(0,0,0)', 'rgb(247,141,27)');
+let shape1A = new Shapes (280, 200, 40, 80,black, orange);
+let shape1B = new Shapes (320, 200, 160, 40, black, orange);
+let shape1C = new Shapes (440, 240, 40, 160, black, orange);
+let shape1D = new Shapes (280, 360, 200, 40, black, orange);
+let shape1E = new Shapes (280,320, 40, 40, black, orange);;
 
 
 //Shape 2
 //color rgb(212,65,62)
-let shape2A = new Shapes (200, 400, 120, 40, 'rgb(0,0,0)', 'rgb(212,65,62)');
-let shape2B = new Shapes (200, 80, 40, 320, 'rgb(0,0,0)', 'rgb(212,65,62)');
-let shape2C = new Shapes (240, 80, 320, 40, 'rgb(0,0,0)', 'rgb(212,65,62)');
-let shape2D = new Shapes (520, 120, 40, 400, 'rgb(0,0,0)','rgb(212,65,62)');
+let shape2A = new Shapes (200, 400, 120, 40,  black, red);
+let shape2B = new Shapes (200, 80, 40, 320,  black, red);
+let shape2C = new Shapes (240, 80, 320, 40,  black, red);
+let shape2D = new Shapes (520, 120, 40, 400,  black, red);
 
 //shape 3
 //color rgb(83,160,243)
-let shape3A = new Shapes (80, 360, 40, 160, 'rgb(0,0,0)', 'rgb(83,160,243)');
-let shape3B = new Shapes (120, 480, 400, 40, 'rgb(0,0,0)', 'rgb(83,160,243)');
+let shape3A = new Shapes (80, 360, 40, 160,  black, blue);
+let shape3B = new Shapes (120, 480, 400, 40,  black, blue);
 
 //shape 4
 //color rgb(83,160,243)
-let shape4A = new Shapes (80, 80, 40, 200, 'rgb(0,0,0)', 'rgb(83,160,243)');
-let shape4B = new Shapes (120, 80, 80, 40, 'rgb(0,0,0)', 'rgb(83,160,243)');
+let shape4A = new Shapes (80, 80, 40, 200,  black, blue);
+let shape4B = new Shapes (120, 80, 80, 40,  black, blue);
 
 
 //shape 5
 //color rgb(11,186,14)
-let shape5 = new Shapes (40, 240, 40, 40, 'rgb(0,0,0)', 'rgb(11,186,14)');
+let shape5 = new Shapes (40, 240, 40, 40, black, green);
 
 //shape 6
 // color rgb(83,160,243)
-let shape6A = new Shapes (560, 480, 120, 40, 'rgb(0,0,0)', 'rgb(83,160,243)');
-let shape6B = new Shapes (680, 360, 40, 160,'rgb(0,0,0)', 'rgb(83,160,243)');
+let shape6A = new Shapes (560, 480, 120, 40, black, blue);
+let shape6B = new Shapes (680, 360, 40, 160,black, blue);
 
 
 //shape 7
 //color rgb(11,186,14)
-let shape7 = new Shapes (720, 240, 40, 40, 'rgb(0,0,0)', 'rgb(11,186,14)');
+let shape7 = new Shapes (720, 240, 40, 40, black, green);
 
 //shape 8
 //color rgb(83,160,243)
-let shape8A = new Shapes (640, 80, 40, 40, 'rgb(0,0,0)', 'rgb(83,160,243)');
-let shape8B = new Shapes (680, 80, 40, 200, 'rgb(0,0,0)', 'rgb(83,160,243)');
+let shape8A = new Shapes (640, 80, 40, 40, black, blue);
+let shape8B = new Shapes (680, 80, 40, 200, black, blue);
 
 //shape 9
 //color rgb(83,160,243)
-let shape9 = new Shapes (560, 80, 40, 40, 'rgb(0,0,0)', 'rgb(83,160,243)');
+let shape9 = new Shapes (560, 80, 40, 40, black, blue);
 
 
 //final shape
 //color rgb(247,141,27)
-let shape10A = new Shapes (0, 0, 40, 160,'rgb(0,0,0)', 'rgb(247,141,27)');
-let shape10B = new Shapes (40, 0, 720, 40,'rgb(0,0,0)', 'rgb(247,141,27)');
-let shape10C = new Shapes (760, 0, 40, 600,'rgb(0,0,0)', 'rgb(247,141,27)');
-let shape10D = new Shapes (0, 560, 760, 40,'rgb(0,0,0)', 'rgb(247,141,27)');
-let shape10E = new Shapes (0, 200, 40, 360,'rgb(0,0,0)', 'rgb(247,141,27)');
+let shape10A = new Shapes (0, 0, 40, 160, black, orange);
+let shape10B = new Shapes (40, 0, 720, 40, black, orange);
+let shape10C = new Shapes (760, 0, 40, 600, black, orange);
+let shape10D = new Shapes (0, 560, 760, 40, black, orange);
+let shape10E = new Shapes (0, 200, 40, 360, black, orange);
 
 let shape1 = [shape1A, shape1B, shape1C, shape1D, shape1E];
 let shape2 =[shape2A, shape2B, shape2C, shape2D];

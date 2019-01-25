@@ -8,6 +8,3 @@ c.beginPath();
     c.fillStyle = 'rgb(255,255,255)';
     c.fill();
     c.closePath();
-
-
-//Sounds

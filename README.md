@@ -8,7 +8,7 @@ when moving, he suddenly touches a wall that blinks for a second. the wall shows
 walls are actually a maze.
 
 ## MVP 
-Canvas
+Game using Canvas with Javascript.
 
 Create a start screen
 Create a game screen

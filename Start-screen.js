@@ -1,5 +1,3 @@
-
-
 let startScreen = document.getElementById('start-screen')
 let d = startScreen.getContext ('2d');
 startScreen.width = window.innerWidth;
@@ -70,47 +68,98 @@ function Squarre(squarreX, squarreY, dx, dy, radius) {
     }
 }
 
-
 //Text
 
-randomCharacterSpeech1 = function () {
-    d.font = "20px Courier New";
-    d.fillText("Wooow, it's so nice to be all together", squarreArray[90].squarreX, squarreArray[90].squarreY);
+let font1 = "30px Courier New";
+let font2 = "40px Courier New";
+let randomLine1 = "Wooow, it's so nice to be all together";
+let randomLine2 = "I'm so happy to be with my friends";
+let randomLine3 = "Ha ha ha ha";
+const instruction1 = "So much joy in here...";
+const instruction2 = "It makes you want to stop it, no?";
+const instruction3 = "Select a victim clicking on him";
+const instructionsX = (startScreen.width/8)*3;
+const instructionY = (startScreen.height/10);
+let empty = "";
+let blank = "";
+let nothing = "";
+let empty1 = "";
+let empty2 = "";
+let empty3 = "";
+
+
+getTitle = function (){
+    d.font = "100px Courier New";
+    d.fillText("GET ME OUT", 200, 200);
 }
-     
+
+randomCharacterSpeech1 = function (){
+    d.font = font1;
+    d.fillText(empty, squarreArray[90].squarreX, squarreArray[90].squarreY); 
+    
+    setTimeout(() => {
+        empty = randomLine1
+    }, 4000); 
+}
+
 randomCharacterSpeech2 = function (){
-    d.font = "20px Courier New"
-    d.fillText("I'm so happy to be with my friends", squarreArray[50].squarreX, squarreArray[50].squarreY)
+    d.font = font1;
+    d.fillText(blank, squarreArray[50].squarreX, squarreArray[50].squarreY)
+
+    setTimeout(() => {
+        blank= randomLine2; 
+    }, 5000);
+}
+
+randomCharacterSpeech3 = function (){
+    d.font = font1;
+    d.fillText(nothing, squarreArray[60].squarreX, squarreArray[60].squarreY)
+
+    setTimeout(() => {
+        nothing= randomLine3; 
+    }, 6000);
+   
+    setTimeout(() => {
+        font1 = "0px Courrier New"
+    }, 10000);
+}
+
+ //Instructions
+instructions1 = function(){
+    d.font = font2;
+    d.fillText(empty1, instructionsX, instructionY)
+    
+    setTimeout(() => {
+        empty1= instruction1; 
+    }, 6000);
 }
     
-randomCharacterSpeech3 = function (){
-    d.font = "20px Courier New"
-    d.fillText("Ha ha ha ha", squarreArray[60].squarreX, squarreArray[60].squarreY)
+instructions2 = function(){
+    d.font = font2;
+    d.fillText(empty2, instructionsX, instructionY+40)
+    
+    setTimeout(() => {
+        empty2= instruction2; 
+    }, 8000);
 }
 
-    //Instructions
-    instructions1 = function(){
-        d.font = "20px Courier New"
-        d.fillText("So much joy in here...", (startScreen.width/8)*6, (startScreen.height/10))
-    }
-    instructions2 = function(){
-        d.font = "20px Courier New"
-        d.fillText("It's annoying, isn't it???", (startScreen.width/8)*6, (startScreen.height/10)+40)
-    }
-
-    instructions3 = function(){
-        d.font = "20px Courier New"
-        d.fillText("It makes you want to stop it, no?", (startScreen.width/8)*6, (startScreen.height/10)+80)
-    }
-
-    instructions4 = function(){
-        d.font ="20px Courier New"
-        d.fillText("Select a victim clicking on him", (startScreen.width/8)*6, (startScreen.height/10)+120)
-    }
+instructions3 = function(){
+    d.font = font2;
+    d.fillText(empty3, instructionsX, instructionY+80)
+    
+    setTimeout(() => {
+        empty3= instruction3; 
+    }, 10000);
+       
+    setTimeout(() => {
+        font2 = "0px Courrier New"
+    }, 14000);
+}
 
 
-// ClearRect
-
+setTimeout(() => {
+    animate();    
+}, 5000);
 function animate(){
     requestAnimationFrame(animate);
     d.clearRect(0,0, innerWidth, innerHeight);
@@ -125,8 +174,7 @@ function animate(){
     instructions1();
     instructions2();
     instructions3();
-    instructions4();
 }
 
-animate();
+
 
